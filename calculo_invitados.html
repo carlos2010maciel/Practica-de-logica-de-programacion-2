@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+
+<!-- Nuestro amigo Jorge creó un programa simple para calcular el total de invitados de su fiesta, el programa tiene que sumar el total de invitados normales con el total de invitados VIPs. Ciertamente podría usar la calculadora, pero le pareció relevante ejercer su conocimiento para diseñar un programa. -->
+
+<h1>Programa para calcular el total de invitados</h1>
+
+<script type="text/javascript">
+	
+	function saltarLinea() {
+
+		document.write("<br>"+"<br>");
+
+	}
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea;
+
+	}
+
+	/* Como la función prompt siempre transforma todo lo que digitamos en el formato del texto, o sea, como un string, es una buena práctica siempre convertir el valor digitado para el numero cuando nuestra intención es leer un número. Analicemos esta instrucción: var invitados = parseInt(prompt("Número de invitados"));
+	La función prompt retorna lo que digitamos como string y ese retorno es pasado para parseInt. Y es esta función que recibe un string y la convierte en un número. Ahora, como tenemos dos números vinculados, no sucederá más una concatenación, y sí una suma.*/
+	var invitadosNormales = parseInt(prompt("Ingrese el número de invitados normales"));
+	var invitadosVip = parseInt(prompt("Ingrese el número de invitados VIP"));
+
+	var invitadosTotales = invitadosNormales + invitadosVip;
+
+	imprimir("La cantidad total de invitados es: " + invitadosTotales);
+	
+</script>
