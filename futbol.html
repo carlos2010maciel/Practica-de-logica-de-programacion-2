@@ -18,21 +18,20 @@
 		saltarLinea();
 
 	}
+	//Convertir texto ingresado a número. De String a número
 
-	function calcularImc(peso,altura) {
-
-		return (peso / (altura * altura));
+	// Al ingresar de esta formaJavaScript interpreta que estoy ingresando un String
+	// var victorias = prompt("Ingrese la cantidad de victorias"); 
+	// var empates = parseInt(prompt("Ingrese la cantidad de empates");
 	
-	}
+	// con parseInt le digo a JavaScript que el String lo convierta aa número
+	var victorias = parseInt(prompt("Ingrese la cantidad de victorias")); 
+	var empates = parseInt(prompt("Ingrese la cantidad de empates"));
 
-	nombre = prompt("infome su nombre")
-	pesoInformado = prompt(nombre + ", infome su peso")
-	alturaInformado = prompt(nombre + ",infome su altura")
-	
-	imcCalculado = calcularImc(pesoInformado,alturaInformado)
+	//"10"*2 = 20 - Acá multiplica
+	//"10"+25 = 1025 - Acá concatena
+	var puntosTotal = (victorias*3) + empates;
 
-	imprimir(nombre + ", su imc calculado es: " + imcCalculado);
+	imprimir("El puntaje total del equipo es: " + puntosTotal);
 
 </script>
-
-
