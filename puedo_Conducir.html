@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA DE ADIVINACIÓN</h1>
+
+	<!-- Programa en el cual se pide ingresar un número entre el 0 y el 10 y en base a ello arroja un mensaje si acertó o no. Si el número ingresado está fuera del rango solicitad lanza un mensaje -->
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+
+	var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+
+   if (edad >= 18 && tieneLicencia == "S") {
+
+   			imprimir("Usted puede conducir.");
+   		}
+
+   			else {
+   
+    			imprimir("No puedes conducir por no tener la edad mínima o bien la licencia habilitante");
+    	
+    	}
+
+</script>
+
+
