@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA DE ADIVINACIÓN</h1>
+
+	<!-- Programa en el cual se pide ingresar un número entre el 0 y el 10 y en base a ello arroja un mensaje si acertó o no. Si el número ingresado está fuera del rango solicitad lanza un mensaje -->
+
+<script>
+
+	function saltarLinea() {
+
+		document.write("<br>");	
+		document.write("<br>");	
+		document.write("<br>");	
+
+	}  
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		saltarLinea();
+
+	}
+
+	var numeroPensado = Math.round(Math.random()*10);
+	var numeroIngresado = parseInt(prompt("Ingrese un número entre 0 y 10"));
+
+	if (numeroIngresado > 10) {
+
+			imprimir("El número debía ser entre 0 y 10");
+
+		}
+
+	if (numeroIngresado < 0) {
+
+			imprimir("El número debía ser entre 0 y 10");
+
+		}
+
+	if (numeroIngresado == numeroPensado) {
+
+		imprimir("Usted acertó");
+
+	} else {
+
+		imprimir("Usted no acertó. El número pensado era " + numeroPensado);
+	}
+</script>
+
+
