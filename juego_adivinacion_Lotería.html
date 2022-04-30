@@ -23,11 +23,27 @@
 
 	}
 
+	function sorteo(n) { 
+        
+        return Math.round(Math.random()*n);
+        
+    }
 
+	var numeroPensado = sorteo(10);
+	var numeroIngresado = parseInt(prompt("Ingrese un número entre 0 y 10"));
 
-
-
+	if (numeroPensado == numeroIngresado) {
+		imprimir("Usted acertó");
+	
+	} else {
+	
+		if (numeroIngresado > numeroPensado) {
+			imprimir("Usted erró. El número pensado era menor que tu número");
+		
+		} else {
+			imprimir("Usted erró. El número pensado era menor que tu número");
+		
+		}
+	}
 
 </script>
-
-
