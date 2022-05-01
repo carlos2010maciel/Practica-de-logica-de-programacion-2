@@ -14,24 +14,15 @@
         saltarLinea();
     }
 
-    var numeroTabla = parseInt(prompt("Ingrese el número correspondiente a la tabla de multiplicar que desea calcular"));
-    var multiplicador = 1;
 
+    var numero = 1;
+    numero = 2;
 
-    imprimir("WHILE");
-
-    while(multiplicador <=10) {
-        imprimir(numeroTabla * multiplicador);
-        multiplicador++;
-
+    while(numero <= 100) {
+        imprimir(numero);
+        numero = numero + 2;
     }
 
-    saltarLinea();
-
-    imprimir("FOR");
-
-    for (var multiplicador = 1; multiplicador <= 10; multiplicador++) {
-        imprimir(numeroTabla * multiplicador);
-    }
+    imprimir("FIN");
 
 </script>
