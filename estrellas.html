@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA - ESTRELLAS</h1>
+
+
+<script>
+// FUNCIÓN PARA SALTO DE LÍNEA
+	function saltarLinea() {
+		document.write("<br>");
+		document.write("<br>");
+	}  
+
+//FUNCIÓN PARA IMPRIMIR EN PANTALLA
+	function imprimir(frase) {
+		document.write(frase);
+		saltarLinea();
+		}
+
+	for (var lineas = 1; lineas <= 5; lineas++) {
+		for (columnas = 1; columnas <= 15; columnas++) {
+			document.write("*");
+		}
+		saltarLinea();
+	}
+
+	imprimir("FIN");
+</script>
