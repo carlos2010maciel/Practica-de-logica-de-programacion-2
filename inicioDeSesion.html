@@ -1,0 +1,59 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA - INICIO DE SESIÓN</h1>
+
+	<!-- Es común que los programas tengan una pantalla de inicio de sesión, es decir, la pantalla que identifica al usuario en el sistema. Para permitir el acceso, el nombre de usuario y la contraseña deben coincidir con los valores almacenados por la aplicación, independientemente de dónde se guardó la información. Tampoco es raro permitir un máximo de tres intentos y después del tercero, el sistema se niega a identificar al usuario y notifica al administrador del sistema o incluso al propietario de la cuenta.-
+
+	Aquí está el código que inicia sesión, pero ATENCIÓN, solo le da al usuario la posibilidad de 3 intentos de inicio de sesión.
+
+	Si lo hace bien en el primer intento, no tiene sentido seguir preguntando por su nombre de usuario y contraseña.-->
+
+<script>
+// FUNCIÓN PARA SALTO DE LÍNEA
+	function saltarLinea() {
+		document.write("<br>");	
+		document.write("<br>");	
+	}  
+
+//FUNCIÓN PARA IMPRIMIR EN PANTALLA
+	function imprimir(frase) {
+		document.write(frase);
+		saltarLinea();
+		}
+
+//DECLARACIÓN DE VARIABLES Y ASIGNACIÓN DE VALORES
+    var usuarioRegistrado = "prueba";
+    var contraseniaRegistrada = "1234";
+    var intentosDeIngreso = 3;
+    var contadorDeIngresos = 1;
+
+//INICIO DE SENTENCIA WHILE
+	while (contadorDeIngresos <= intentosDeIngreso) {
+
+		//Solicita ingreso de usuario y contraseña
+		var usuarioIngresado = prompt("Ingrese su usuario: prueba");
+    	var contraseniaIngresada = prompt("Ingrese su contraseña: 1234");
+
+    	//Compara datos ingresados con datos registrados
+		if (usuarioRegistrado == usuarioIngresado && contraseniaRegistrada == contraseniaIngresada) {
+			break;
+
+		} else {
+
+        	alert("inicio de sesión inválido. Favor intente de nuevo");
+    	}
+
+    	contadorDeIngresos++;
+}
+
+//IMPRIME EN PANTALLA
+	if (usuarioRegistrado == usuarioIngresado && contraseniaRegistrada == contraseniaIngresada) {
+			imprimir(usuarioRegistrado + " Bienvenido al sistema");
+		}
+
+	else {
+        	imprimir("Ha superado el límite de intentos posibles de inicio de sesión.");
+        	imprimir("Contactar al administrador para resetear los datos de ingreso.");
+    	}
+
+</script>
