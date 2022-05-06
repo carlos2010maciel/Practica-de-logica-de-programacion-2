@@ -5,45 +5,53 @@
 	<!-- Programa en el cual se pide ingresar un número entre el 0 y el 10 y en base a ello arroja un mensaje si acertó o no. Si el número ingresado está fuera del rango solicitad lanza un mensaje -->
 
 <script>
-
+// FUNCIÓN PARA SALTO DE LÍNEA
 	function saltarLinea() {
-
 		document.write("<br>");	
 		document.write("<br>");	
 		document.write("<br>");	
-
 	}  
 
+//FUNCIÓN PARA IMPRIMIR UNA STRING EN PANTALLA
 	function imprimir(frase) {
-
 		document.write(frase);
 		saltarLinea();
-
 		}
 
+//DECLARACIÓN DE VARIABLES Y ASIGNACIÓN DE VALORES
 	var numeroPensado = Math.round(Math.random()*10);
-	var numeroIngresado = parseInt(prompt("Ingrese un número entre 0 y 10"));
+	var intentos = 3;
+	var contador = 1;
 
-	if (numeroIngresado > 10) {
+//INICIO DE SENTENCIA WHILE
+	while (contador <= intentos) {
+		var numeroIngresado = parseInt(prompt("Ingrese un número entre 0 y 10"));
 
-			imprimir("El número debía ser entre 0 y 10");
+		if (numeroIngresado < 0 || numeroIngresado > 10 ) { //Evalúa si el número ingresado está dentro del rango solicitado
+			alert("El número ingresado debe ser entre 0 y 10");
 
-		}
+		} else //Compara los números
+				{if (numeroIngresado == numeroPensado) {
+					alert("Usted acertó");
+					break;
+					}
 
-	if (numeroIngresado < 0) {
+					else {
+						alert("Usted no acertó.");
+						
+					}}
 
-			imprimir("El número debía ser entre 0 y 10");
-
-		}
-
-	if (numeroIngresado == numeroPensado) {
-
-		imprimir("Usted acertó");
-
-	} else {
-
-		imprimir("Usted no acertó. El número pensado era " + numeroPensado);
+		contador++;
 	}
+
+//IMPRIME EN PANTALLA
+	if (numeroIngresado == numeroPensado) {
+		imprimir("Usted acertó en el intento N° " + intentos + ". El número pensado era el " + numeroPensado);
+	} else {
+		imprimir("Usted no acertó. El número pensado era el: " + numeroPensado);
+	}
+
+	imprimir("FIN");
 </script>
 
 
