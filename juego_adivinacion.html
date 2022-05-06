@@ -12,7 +12,7 @@
 		document.write("<br>");	
 	}  
 
-//FUNCIÓN PARA IMPRIMIR UNA STRING EN PANTALLA
+//FUNCIÓN PARA IMPRIMIR EN PANTALLA
 	function imprimir(frase) {
 		document.write(frase);
 		saltarLinea();
@@ -21,10 +21,10 @@
 //DECLARACIÓN DE VARIABLES Y ASIGNACIÓN DE VALORES
 	var numeroPensado = Math.round(Math.random()*10);
 	var intentos = 3;
-	var contador = 1;
+	var contadorDeIntentos = 1;
 
 //INICIO DE SENTENCIA WHILE
-	while (contador <= intentos) {
+	while (contadorDeIntentos <= intentos) {
 		var numeroIngresado = parseInt(prompt("Ingrese un número entre 0 y 10"));
 
 		if (numeroIngresado < 0 || numeroIngresado > 10 ) { //Evalúa si el número ingresado está dentro del rango solicitado
@@ -35,23 +35,18 @@
 					alert("Usted acertó");
 					break;
 					}
-
 					else {
 						alert("Usted no acertó.");
-						
 					}}
-
-		contador++;
+		contadorDeIntentos++;
 	}
 
 //IMPRIME EN PANTALLA
 	if (numeroIngresado == numeroPensado) {
-		imprimir("Usted acertó en el intento N° " + intentos + ". El número pensado era el " + numeroPensado);
+		imprimir("Usted acertó en el intento N° " + contadorDeIntentos + ". El número pensado era el " + numeroPensado);
 	} else {
 		imprimir("Usted no acertó. El número pensado era el: " + numeroPensado);
 	}
 
 	imprimir("FIN");
 </script>
-
-
