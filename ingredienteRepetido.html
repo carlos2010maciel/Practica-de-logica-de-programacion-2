@@ -8,6 +8,17 @@
     var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
     var contador = 1;
 
+    function saltarLinea() {
+        document.write("<br>"); 
+        document.write("<br>"); 
+        document.write("<br>"); 
+    }  
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
     while( contador <= cantidad) {
         var ingrediente = prompt("Informe el ingrediente " + contador);
         var encontrado = false;
@@ -25,6 +36,6 @@
             }
     }
 
-    console.log(ingredientes);
+    imprimir(ingredientes);
 
 </script>
